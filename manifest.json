@@ -1,0 +1,14 @@
+{
+	"name": "exCITEment",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Cite in Harvard & APA!",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Cite in Harvard and APA!",
+		"default_popup": "extension.html"
+	},
+	"icons": {
+		"128": "icon.png"
+	}
+}

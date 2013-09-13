@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CiteMe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery.js"></script>
+  <script src="jqueryui.js"></script>
+  <script src="cites.js"></script>
+</head>
+
+<body bgcolor="#FFF"> 
+	<p><b>Welcome to JT's exCITEing Chrome Extension</b></p>
+	<div id="accordion">
+		<h5>Website</h5>
+		<div>
+			
+				<input type="text" placeholder="Author" id="WebAuthorName"><br>
+				<input type="text" placeholder="Title" id="WebTitle" ><br>
+				<input type="text" placeholder="Website name" id="WebName"><br>
+				<input type="text" placeholder="Publication Year" id="WebYear"><br>
+				<input type="text" placeholder="URL" id="WebURL" ><br>
+				<input type="text" placeholder="Accessed Date" id="WebDate" ><br>
+			
+				<select name="references" id="Webreferences">
+					<option value="harvard">Harvard</option>
+					<option value="APA">APA</option>
+				</select>
+				
+				<button id="WebID">Cite!</button>
+				
+			
+			<div>
+			<div id="webcites"></div>
+			</div>
+
+		</div>
+		<h3>Book</h3>
+		<div>
+
+				<input type="text" placeholder="Author" id="BookAuthorName" ><br>
+				<input type="text" placeholder="Title" id="BookTitle" ><br>
+				<input type="text" placeholder="Publication Year" id="BookYear"><br>
+				<input type="text" placeholder="Publication Place" id="BookPubPlace" ><br>
+				<input type="text" placeholder="Publisher" id="BookPublisher" ><br>
+				<select name="edition" id="editiontype">
+					<option value="">1st Edition</option>
+					<option value="2nd ed">2nd Edition</option>
+					<option value="3rd ed">3rd Edition</option>
+					<option value="4th ed">4th Edition</option>
+					<option value="5th ed">5th Edition</option>	
+					<option value="6th ed">6th Edition</option>
+					<option value="7th ed">7th Edition</option>
+				</select>
+				<input type="text" placeholder="Page" id="BookPage"><br>
+			
+				<select name="references" id="Bookreferences">
+					<option value="harvard">Harvard</option>
+					<option value="APA">APA</option>
+				</select>
+				<button id="BookID">Cite!</button>
+
+			
+			<div>
+				<p id="bookcites"></p>
+			</div>
+		</div>
+
+		<h3>Journal</h3>
+		<div>
+				<input type="text" placeholder="Author" id="JournalAuthorName"><br>
+				<input type="text" placeholder="Journal Article" id="JournalArticle"><br>
+				<input type="text" placeholder="Journal Title"  id="JournalTitle"><br>
+				<input type="text" placeholder="Volume" id="JournalVolume"><br>
+				<input type="text" placeholder="Publication Year"  id="JournalYear"><br>
+				<input type="text" placeholder="Part" id="JournalPart"><br>	
+				<input type="text" placeholder="Pages" id="JournalPage"><br>
+			
+				<select name="references" id="Journalreferences">
+					<option value="harvard">Harvard</option>
+					<option value="APA">APA</option>
+				</select>
+				<button id="JournalID">Cite!</button>
+			<div>
+				<p id="journalcites"></p>
+			</div>			
+		</div>
+		
+		<h3>E-Journal</h3>
+		<div>
+				<input type="text" placeholder="Author" id="EJournalAuthorName"><br>
+				<input type="text" placeholder="Journal Article" id="EJournalArticle"><br>
+				<input type="text" placeholder="Journal Title"  id="EJournalTitle"><br>
+				<input type="text" placeholder="Volume" id="EJournalVolume"><br>
+				<input type="text" placeholder="Publication Year"  id="EJournalYear"><br>
+				<input type="text" placeholder="Part" id="EJournalPart"><br>	
+				<input type="text" placeholder="Pages" id="EJournalPage"><br>
+				<input type="text" placeholder="URL" id="EJournalURL" ><br>
+				<input type="text" placeholder="Accessed Date" id="EJournalAcc" ><br>	
+				<select name="references" id="EJournalreferences">
+					<option value="harvard">Harvard</option>
+					<option value="APA">APA</option>
+				</select>
+				<button id="EJournalID">Cite!</button>
+			<div>
+				<p id="ejournalcites"></p>
+			</div>			
+		</div>
+
+		<h4>Bibiography</h4>
+		<div>			
+            List: <select name="combo" id="combo">
+            <option value="new">New..</option>
+        	</select>
+			<button id="Bib">OK</button>
+			<div id="newlist" style="visibility: hidden">Add to list: <input type="text" name="txtCombo" id="txtCombo"/><br/></div>
+		<div>
+			<div id="cites" style="visibility:hidden;outline-style:solid;outline-width:thin;font-size:16px">></div>
+			<button id="remove" style="visibility:hidden">Delete</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
