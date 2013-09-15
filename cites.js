@@ -620,21 +620,6 @@ function addCombo(e)
       else;
     }
 
-    // for (var i = 1; i <= 30; i++) {
-    //     combo.options[i]=null;
-    // }
-
-    // option.text = "New...";
-    // option.value = "new"; 
-    // try 
-    // {
-    //   combo.add(option, null); //Standard 
-    // }
-    //   catch(error) 
-    // {
-    //   combo.add(option); // IE only
-    // }
-
     for (var i = 1; i <= 100; i++){
       var junk = localStorage['b' + i];
       if (junk == 'undefined'){
@@ -642,6 +627,23 @@ function addCombo(e)
       }
       else;
     }
+  }
+
+
+  function autoWURL()
+  {
+    chrome.tabs.getSelected(null,function(tab) {
+    var tabUrl = tab.url;
+    document.getElementById("WebURL").value = tabUrl; 
+    }); 
+  }
+
+  function autoEJURL(tablink)
+  {
+    chrome.tabs.getSelected(null,function(tab) {
+    var tabUrl = tab.url;
+    document.getElementById("EJournalURL").value = tabUrl; 
+    });   
   }
 
  document.addEventListener('DOMContentLoaded', function () {
@@ -670,4 +672,13 @@ function addCombo(e)
     link6.addEventListener('click', function(){
     removeBib();
     })
+    var link7 = document.getElementById('autoWURL');
+    link7.addEventListener('click', function(){
+    autoWURL();
+    })
+    var link8 = document.getElementById('autoEJURL');
+    link8.addEventListener('click', function(){
+    autoEJURL();
+    })
+
  });

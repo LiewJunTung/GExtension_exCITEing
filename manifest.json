@@ -1,5 +1,5 @@
 {
-	"name": "exCITEment",
+	"name": "exCITEting",
 	"version": "1.0",
 	"manifest_version": 2,
 	"description": "Cite in Harvard & APA!",
@@ -8,7 +8,10 @@
 		"default_title": "Cite in Harvard and APA!",
 		"default_popup": "extension.html"
 	},
+	"permissions": [    "tabs"
+	],
 	"icons": {
 		"128": "icon.png"
 	}
+
 }
